@@ -15,6 +15,12 @@
   background-color: @tree-view-background-color;
 
   .list-item.selected {
-    color: @text-color-selected;
+    color: mix(lighten(@base-background-color, 90%),gray);
+  }
+  .directory.entry.list-nested-item.selected.collapsed{
+    color: mix(lighten(@base-background-color, 90%),gray);
+  }
+  .directory.entry.list-nested-item.selected.expanded{
+    color: mix(lighten(@base-background-color, 90%),gray);
   }
 }
