@@ -1,0 +1,15 @@
+@base-background-color: lighten(rgb(4, 32, 41), 3%);
+
+.platformio-ide-terminal .xterm {
+  background-color: @base-background-color;
+  color: lighten(mix(@base-background-color, gray), 30%);
+;
+
+  ::selection {
+    background-color: rgb(4, 32, 41);
+  }
+
+  .terminal-cursor {
+    background-color: lighten(mix(@base-background-color, gray), 20%);
+  }
+}
