@@ -10,9 +10,8 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
-
 // Text Colors
-@text-color:           hsl(0,0%,66%);
+@text-color:           lighten(mix(@base-background-color, gray), 30%);
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
 @text-color-selected:  hsl(0,0%,100%);
@@ -33,8 +32,8 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: rgb(4, 32, 41);
+@base-border-color:     darken(@base-background-color, 4%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
