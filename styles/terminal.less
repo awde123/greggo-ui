@@ -1,6 +1,20 @@
-@base-background-color: lighten(rgb(4, 32, 41), 3%);
 
-.platformio-ide-terminal .xterm {
+@base-background-color: lighten(rgb(4, 32, 41), 3%);
+@base-border-color:     darken(@base-background-color, 4%);
+
+.bottom.tool-panel.panel-bottom {
+  border-top: 2px solid @base-border-color;
+
+.btn{
+  background-color: rgb(4, 32, 41)
+  }
+
+.icon {
+  background-color: rgb(4, 32, 41);
+ }
+}
+
+.platformio-ide-terminal .xterm{
   background-color: @base-background-color;
   color: lighten(mix(@base-background-color, gray), 30%);
 ;

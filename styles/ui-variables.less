@@ -11,10 +11,11 @@
 // A good start is to change the color of the `@base-background-color` variable.
 
 // Text Colors
-@text-color:           lighten(mix(@base-background-color, gray), 30%);
+@text-color:           rgb(127, 149, 151);
+@tree-color:           rgb(147, 189, 191);
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color-selected:  lighten(@text-color, 10%);
 
 @text-color-info:    hsl(219,  79%, 66%);
 @text-color-success: hsl(140,  44%, 62%);
