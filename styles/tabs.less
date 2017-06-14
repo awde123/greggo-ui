@@ -6,7 +6,7 @@
 // Overrides: atom/tabs
 
 .list-inline.tab-bar.inset-panel{
-  background-color: rgb(9,68,87);
+  background-color: lighten(rgb(9,68,87), -7%);
 }
 
 .tab-bar {
@@ -20,7 +20,7 @@
     line-height: @tab-height;
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
-    background-color: @tab-background-color;
+    background-color: lighten(@tab-background-color, 5%);
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
@@ -51,7 +51,7 @@
     // Dragging -------------------
     // Styles get applied while dragging a tab
     &.is-dragging {
-      background: darken(@tab-background-color, 10%);
+      background: darken(@tab-background-color, -40%);
       border-color: transparent;
       opacity: .5;
       & .close-icon {
@@ -59,4 +59,17 @@
       }
     }
   }
+}
+.tab.sortable.active{
+  background: linear-gradient(to right, lighten(@tab-background-color, 10%), lighten(rgb(9,68,87), -7%));
+}
+
+.texteditor.tab.sortable.active{
+  background: inherit;
+  background-color: #E8920C;
+  color: white;
+}
+
+.texteditor.tab.sortable.active.right-clicked{
+  color: white;
 }

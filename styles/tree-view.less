@@ -16,12 +16,26 @@
 }
 
 .tree-view {
-  color: @tree-color;
+  color: lightgray;
   background-color: @tree-view-background-color;
 .directory.entry.list-nested-item.status-modified.expanded{
-  color: @tree-color;
+  color: gray;
 }
 .list-item.selected {
-  color: skyblue;
+  color: lightgray;
+  @keyframes fooont{
+    from {font-size: @font-size;}
+    to {font-size: @font-size + .2;}
+  }
+  animation-name: fooont;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  font-size: @font-size + .2;
+}
+.list-item.selected.status-modified {
+  color: @text-color-warning;
+}
+.list-item.selected.status-added {
+  color: @text-color-success;
 }
 }
