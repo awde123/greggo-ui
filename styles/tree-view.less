@@ -16,26 +16,50 @@
 }
 
 .tree-view {
-  color: lightgray;
+  color: gray;
   background-color: @tree-view-background-color;
 .directory.entry.list-nested-item.status-modified.expanded{
   color: gray;
 }
+.directory.entry.list-nested-item.status-modified.collapsed{
+  color: white;
+}
 .list-item.selected {
-  color: lightgray;
+  @og: gray;
   @keyframes fooont{
-    from {font-size: @font-size;}
-    to {font-size: @font-size + .2;}
+    from {font-size: @font-size; color: @og;}
+    to {font-size: @font-size + .2; color: lighten(@og, 20%);}
   }
-  animation-name: fooont;
-  animation-duration: .5s;
-  animation-iteration-count: 1;
+  animation: fooont .2s linear 0s 1 normal;
   font-size: @font-size + .2;
+  color: lightgray;
 }
 .list-item.selected.status-modified {
-  color: @text-color-warning;
+  @oog: @text-color-warning;
+  @keyframes foont{
+    from {font-size: @font-size; color: @oog;}
+    to {font-size: @font-size + .2; color: lighten(@oog, 3%);}
+  }
+  animation: foont .2s linear 0s 1 normal;
+  color: lighten(@oog, 3%);
+  font-size: @font-size + .2;
 }
 .list-item.selected.status-added {
-  color: @text-color-success;
+  @ooog: @text-color-success;
+  @keyframes fant{
+    from {font-size: @font-size; color: @ooog;}
+    to {font-size: @font-size + .2; color: lighten(@ooog, 3%);}
+  }
+  animation: fant .2s linear 0s 1 normal;
+  color: lighten(@ooog, 3%);
+  font-size: @font-size + .2;
 }
+}
+
+.list-group .selected::before, .list-tree .selected::before{
+  @keyframes glow{
+    from {background-color: inherit}
+    to {background-color: #094457;}
+  }
+  animation: glow .1s linear 0s 1 normal;
 }
